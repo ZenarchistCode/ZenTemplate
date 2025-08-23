@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<modded_inputs>
+	<inputs>
+		<actions>
+			<input name="UAZenTemplateKeybind" loc="STR_ZenStringtableText"/>
+		</actions>
+		<sorting name="YourModName" loc="STR_YourModName">
+			<input name="UAZenTemplateKeybind"/>
+		</sorting>
+	</inputs>
+	<preset>
+		<input name="UAZenTemplateKeybind">
+			<btn name="kN"/>
+		</input>
+	</preset>
+</modded_inputs>

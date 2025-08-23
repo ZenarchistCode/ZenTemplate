@@ -1,0 +1,10 @@
+name = "Zenarchist's Template Mod"; // name
+picture = "ZenTemplate\data\modicon.edds"; // picture in expanded description
+logoSmall = "ZenTemplate\data\modicon.edds"; // icon next to mod name when description is not expanded
+logo = "ZenTemplate\data\modicon.edds"; // logo below game menu
+logoOver = "ZenTemplate\data\modicon.edds"; // on mouse hover over logo
+tooltip = "Zenarchist's Template Mod"; // tool tip on mouse hover
+overview = "A template mod."; // overview
+action = "https://zenarchist.com/"; // link
+author = "Zenarchist"; // author
+version = "1.0"; // version
