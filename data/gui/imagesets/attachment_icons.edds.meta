@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{25C6157DFB73B84B}ZenMods/ZenTemplate/data/gui/imagesets/attachment_icons.edds"
+ Author "zen"
+ ChangeDate -1514982631
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "attachment_icons.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

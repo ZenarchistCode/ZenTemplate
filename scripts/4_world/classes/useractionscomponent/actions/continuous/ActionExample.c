@@ -31,4 +31,9 @@ class ActionExample : ActionContinuousBase
 	override void OnFinishProgressServer(ActionData action_data)
 	{
 	}
+
+	void Test()
+	{
+		
+	}
 }

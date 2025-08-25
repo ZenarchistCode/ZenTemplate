@@ -1,0 +1,38 @@
+ImageSetClass {
+ Name "zen_attachment_icons"
+ RefSize 512 512
+ Textures {
+  ImageSetTextureClass {
+   mpix 1
+   path "{25C6157DFB73B84B}ZenTemplate/data/gui/imagesets/attachment_icons.edds"
+  }
+ }
+ Images {
+  ImageSetDefClass purification_tablets {
+   Name "purification_tablets"
+   Pos 0 0
+   Size 256 256
+   Flags 0
+  }
+  ImageSetDefClass pill_bottle {
+   Name "pill_bottle"
+   Pos 256 0
+   Size 256 256
+   Flags 0
+  }
+  ImageSetDefClass pill_bottle_upsidedown {
+   Name "pill_bottle_upsidedown"
+   Pos 0 256
+   Size 256 256
+   Flags 0
+  }
+  ImageSetDefClass purification_tablets_upsidedown {
+   Name "purification_tablets_upsidedown"
+   Pos 256 256
+   Size 256 256
+   Flags 0
+  }
+ }
+ Groups {
+ }
+}

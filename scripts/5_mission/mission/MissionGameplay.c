@@ -29,6 +29,7 @@ modded class MissionGameplay
 	void UpdateExample()
 	{
 		PlayerBase player = PlayerBase.Cast(GetGame().GetPlayer());
+
         if (!player)
 			return;
 
@@ -39,7 +40,7 @@ modded class MissionGameplay
         }
 	}
 
-    private bool Zen_CheckInput(string inputName)
+    bool Zen_CheckInput(string inputName)
     {
         if (GetUApi())
 		{

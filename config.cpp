@@ -1,5 +1,5 @@
 /*
-	© 2025 | ZenTemplate
+	(c) 2025 | ZenTemplate
 
 	This mod is to be used as a template - replace this text with your own.
 	Ctrl + F -> search for "ZenTemplate" -> replace with your mod folder name.
@@ -22,7 +22,7 @@
 		repairableWithKits[] += {5};
 		repairCosts[] += {20};
 
-	Rotation Flags (rotationFlags=X)
+	Item Rotation Flags
 	    ROTATE_Front		=	1
 	    ROTATE_Top			=	2 
 	    ROTATE_Left			=	4 
@@ -47,7 +47,9 @@ class CfgPatches
 		requiredAddons[] =
 		{
 			"DZ_Data",
-			"DZ_Scripts"
+			"DZ_Scripts",
+			"DZ_Gear_Drinks",
+			"DZ_Gear_Medical"
 		};
 	};
 };
@@ -62,7 +64,7 @@ class CfgMods
 		credits = "";
 		version = "1.0";
 		type = "mod";
-		//inputs = "ZenTemplate/data/inputs.xml";
+		inputs = "ZenTemplate/data/inputs.xml";
 		dependencies[] = 
 		{ 
 			"Game", 
@@ -75,7 +77,7 @@ class CfgMods
 			{
 				files[] =
 				{
-					"ZenTemplate/data/gui/ZenTemplate.imageset"
+					"ZenTemplate/data/gui/imagesets/zen_imageset.imageset"
 				};
 			};
 			class gameScriptModule
@@ -108,13 +110,68 @@ class CfgMods
 
 class CfgVehicles
 {
+	// Required vanilla base classes
 	class Inventory_Base;
+	class Bottle_Base;
+	class Edible_Base;
 
-	// Define objects/items/clothing
-	class OldPhoto : Inventory_Base
+	class PurificationTablets: Edible_Base
 	{
-		displayName = "$STR_CfgVehicles_ZenTemplate0";
-		descriptionShort = "$STR_CfgVehicles_ZenTemplate1";
+		// inventorySlot = define which attachments this item can go on.
+		inventorySlot[] +=
+		{
+			"ZenExampleSlot"
+		};
+	};
+
+	class Canteen: Bottle_Base
+	{
+		// attachments = define which items can attach onto this item.
+		attachments[] +=
+		{
+			"ZenExampleSlot"
+		};
+		// Define the GUI attachment categories for this item
+		class GUIInventoryAttachmentsProps
+		{
+			class ZenChlorineTablets
+			{
+				name="$STR_CfgVehicles_PurificationTablets0";
+				description="";
+				attachmentSlots[] =
+				{
+					"ZenExampleSlot"
+				};
+				icon="set:zen_template image:chlorine_tablets";
+			};
+		};
+	};
+
+	// Create a retextured canteen with all the same properties as vanilla
+	// This item will also inherit all the attachment slots, so no need to redefine them.
+	class Zen_Canteen_Black : Canteen
+	{
+		scope = 2;
+		hiddenSelections[] =
+		{
+			"zbytek" // Find this texture selection via Mikero tools or vanilla cpp files
+		};
+		hiddenSelectionsTextures[] =
+		{
+			"ZenTemplate\data\textures\canteen\canteen_black_co.paa"
+		};
+	};
+};
+
+// Attachment slot config
+class CfgSlots
+{
+	//! Example slot. Classname must be Slot_NameParameter. Then the slot is identified by name= parameter.
+	class Slot_ZenExampleSlot
+	{
+		name = "ZenExampleSlot";
+		displayName = "$STR_CfgVehicles_PurificationTablets0";
+		ghostIcon = "set:zen_attachment_icons image:purification_tablets_upsidedown";
 	};
 };
 
@@ -128,23 +185,15 @@ class CfgWeapons
 {
 };
 
-// Ammo types/config
+// Ammo config
 class CfgAmmo
 {
 	class DefaultAmmo;
 };
 
-// Attachment slot config
-class CfgSlots
+// Ammo types
+class CfgAmmoTypes
 {
-	//! Example slot
-	class Slot_ZenExampleSlot
-	{
-		name = "ZenExampleSlot";
-		displayName = "$STR_CfgVehicles_PurificationTablets0";
-		description = "$STR_CfgVehicles_PurificationTablets1";
-		ghostIcon = "missing"; // "set:ZenTemplate image:someimagename"
-	};
 };
 
 class CfgNonAIVehicles
