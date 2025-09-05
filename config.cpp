@@ -216,17 +216,16 @@ class CfgSoundShaders
 	{
 		range=35;
 	};
-
 	class ZenTemplateExample_SoundShader : ZenTemplateBase_SoundShader
 	{
 		samples[]=
 		{
 			{
-				"ZenTemplate\sounds\your_ogg_sound_file",
+				"ZenTemplate\data\sounds\your_ogg_sound_file",
 				1
 			}
 		};
-		volume=0.5;
+		volume=1.0;
 	};
 };
 
@@ -248,5 +247,10 @@ class CfgSoundSets
 		{
 			"ZenTemplateExample_SoundShader"
 		};
-	}
+		class NoiseAI
+		{
+			strength=200;
+			type="sound";
+		};
+	};
 };

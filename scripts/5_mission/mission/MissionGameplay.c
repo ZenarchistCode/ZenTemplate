@@ -1,6 +1,8 @@
 // Client-side only code
 modded class MissionGameplay
 {
+	ref EffectSound	m_ExampleSoundEffect;
+
 	override void OnInit()
     {
         super.OnInit();
@@ -36,7 +38,30 @@ modded class MissionGameplay
 		if (Zen_CheckInput("UAZenTemplateKeybind"))
         {
             // do something
-			ZenTemplateFunctions.DebugMessage("Key pressed!");
+			
+
+			if (m_ExampleSoundEffect)
+			{
+				ZenTemplateFunctions.DebugMessage("Stop sound loop");
+
+				m_ExampleSoundEffect.SoundStop();
+			}
+			else 
+			{
+				ZenTemplateFunctions.DebugMessage("Play sound");
+
+				// LOOP EXAMPLE:
+				// Soundset, object, fade in secs, fade out secs, loop on/off
+				//m_ExampleSoundEffect = SEffectManager.PlaySoundOnObject("ZenTemplateExample_SoundSet", GetGame().GetPlayer(), 0.0, 0.0, true);
+				//m_ExampleSoundEffect.SetAutodestroy(true);
+
+				// ONE-SHOT EXAMPLE: 
+				// Soundset, position, fade in secs, fade out secs, loop on/off
+				vector pos = GetGame().GetPlayer().GetPosition();
+				m_ExampleSoundEffect = SEffectManager.PlaySound("Flies_SoundSet", pos, 1.0, 1.0);
+				m_ExampleSoundEffect.SetAutodestroy(true);
+				m_ExampleSoundEffect.SetSoundVolume(10);
+			}
         }
 	}
 

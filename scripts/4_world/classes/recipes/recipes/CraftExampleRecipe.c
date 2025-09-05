@@ -28,7 +28,7 @@ class CraftExampleRecipe extends RecipeBase
 		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
 
 		//ingredient 1  
-		InsertIngredient(0, makeItem);	// primary ingredient
+		InsertIngredientEx(0, makeItem, "openBeanCan");	// primary ingredient
 
 		m_IngredientAddHealth[0] = -1;	// -1 = do nothing
 		m_IngredientSetHealth[0] = -1; 	// -1 = do nothing
