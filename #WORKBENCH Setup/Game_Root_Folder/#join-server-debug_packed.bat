@@ -32,4 +32,4 @@ rem Persist for next run
 > "%STORE%" echo %MODNAME%
 
 echo Using mod: "%MODNAME%"
-start /D "GAMEDIRECTORYDayZDayZ" DayZDiag_x64.exe "-profiles=profiles" "-mod=P:\@PackedMods\@%modname%;P:\@Dependencies\@CF;P:\@Dependencies\@VPPAdminTools;" "-mission=./mpmissions/firstMission.ChernarusPlus" -filePatching -connect=127.0.0.1 -port=2302
+start /D "GAMEDIRECTORYDayZ" DayZDiag_x64.exe "-profiles=profiles" "-mod=P:\@PackedMods\@%modname%;P:\@Dependencies\@CF;P:\@Dependencies\@VPPAdminTools;" "-mission=./mpmissions/firstMission.ChernarusPlus" -filePatching -connect=127.0.0.1 -port=2302
