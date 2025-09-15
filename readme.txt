@@ -28,6 +28,9 @@ Default DayZ Tools Root Folder Location: 	C:\Program Files (x86)\Steam\steamapps
 My Addon Builder List of Included Files:
 *.emat;*.edds;*.ptc;*.c;*.imageset;*.layout;*.ogg;*.paa;*.fnt;*.tga;*.xml;*.csv;*.rvmat;*.map;*.html
 
+Download my ZenTemplate folder from GitHub: 
+https://github.com/ZenarchistCode/ZenTemplate
+
 PREPARATION (ONLY NEEDS TO BE DONE ONCE):
 Step 1. Make sure your P: drive is mounted (run DayZ Tools)
 Step 2. Run the Workbench and click Workbench -> Options -> Set your Source data directory to P:/
@@ -39,7 +42,7 @@ Step 7: Cut & paste the Game_Root_Folder contents into your game directory and o
 Step 8: Run "@1-LinkScripts.bat" in your game root directory. This only needs to be done once - you can delete this batch file after if you want.
 Step 9: You can delete the #WORKBENCH Setup folder out of your ZenTemplate folder now - you've set up the workbench successfully.
 
-MOD SETUP:
+MOD SETUP (DO THIS FOR EVERY NEW MOD PROJECT YOU START):
 Step 1: Clone the "ZenTemplate" folder onto your P: drive and rename the root folder to whatever mod name you want (eg. "MyFirstMod")
 Step 2: Run the "RENAME.bat" file in the mod's root folder and enter your mod name - eg. "MyFirstMod" - to rename all the file paths
 Step 3: Navigate to your DayZ game directory and run "@LinkMod.bat" - type in your mod name (eg. "MyFirstMod") - enables hot-loading
@@ -50,6 +53,7 @@ Step 4: Pack your mod to ensure everything works - run DayZ Tools -> Addon Build
 Step 5: To begin editing the mod in the Workbench, navigate to P: and run "@RunWorkbench.bat" - enter your mod name (eg. "MyFirstMod")
 Step 6: To test your mod with hot-loading enabled, run "#run-server-debug_hotload" and then "#join-server-debug_hotload"
 Step 7: To test your mod fully-packed in the .pbo, run the "_packed.bat" versions instead.
+Step 8: Don't forget to update your 3rd-party mod dependencies in the "@RunWorkbench.bat" and "#run-server-debug_hotload.bat" etc files as needed.
 
 RECOMMENDED:
 Create shortcuts to your DayZ root game folder AND DayZ client-side logs (C:\Users\YOUR_NAME\AppData\Local\DayZ) and put it in your P: drive for quick reference.
