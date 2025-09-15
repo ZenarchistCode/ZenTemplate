@@ -1,0 +1,10 @@
+name = "YOUR MOD NAME"; // name
+picture = "ZenTemplate\data\thumbnail.edds"; // picture in expanded description
+logoSmall = "ZenTemplate\data\thumbnail.edds"; // icon next to mod name when description is not expanded
+logo = "ZenTemplate\data\thumbnail.edds"; // logo below game menu
+logoOver = "ZenTemplate\data\thumbnail.edds"; // on mouse hover over logo
+tooltip = "YOUR MOD NAME"; // tool tip on mouse hover
+overview = "Does some cool shit."; // overview
+action = "https://zenarchist.com/"; // link
+author = "YOUR NAME"; // author
+version = "1.0"; // version
