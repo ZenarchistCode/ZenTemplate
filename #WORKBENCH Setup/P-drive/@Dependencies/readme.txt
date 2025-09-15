@@ -1,0 +1,2 @@
+Put any mods your mod depends on in here (copy & paste the @Folder from the Workshop folder in the game root directory)
+Don't forget to update the Batch files in your game root directory to include the required @ModFolders!

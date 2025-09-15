@@ -14,7 +14,7 @@ class ActionExample : ActionContinuousBase
 		m_CommandUID = DayZPlayerConstants.CMD_ACTIONFB_CRAFTING;
 		m_FullBody = true;
 		m_StanceMask = DayZPlayerConstants.STANCEMASK_CROUCH;
-		m_Text = "Example action";
+		m_Text = "Your action name";
 	}
 
 	override void CreateConditionComponents()

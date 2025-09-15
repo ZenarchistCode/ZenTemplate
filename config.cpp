@@ -43,7 +43,6 @@ class CfgPatches
 {
 	class ZenTemplate
 	{
-		requiredVersion = 0.1;
 		requiredAddons[] =
 		{
 			"DZ_Data",
@@ -58,19 +57,9 @@ class CfgMods
 {
 	class ZenTemplate
 	{
-		dir = "ZenTemplate";
-		name = "";
 		author = "";
-		credits = "";
-		version = "1.0";
 		type = "mod";
 		inputs = "ZenTemplate/data/inputs.xml";
-		dependencies[] = 
-		{ 
-			"Game", 
-			"World", 
-			"Mission" 
-		};
 		class defs
 		{
 			class imageSets
@@ -82,31 +71,35 @@ class CfgMods
 			};
 			class gameScriptModule
 			{
+				value = "";
 				files[] = 
-				{
-					"ZenTemplate/scripts/common",
-					"ZenTemplate/scripts/3_game"
+				{ 
+					"ZenTemplate/Scripts/3_Game",
+					"ZenTemplate/Scripts/Common"
 				};
 			};
 			class worldScriptModule
 			{
+				value = "";
 				files[] = 
-				{
-					"ZenTemplate/scripts/common",
-					"ZenTemplate/scripts/4_world"
+				{ 
+					"ZenTemplate/Scripts/4_World",
+					"ZenTemplate/Scripts/Common"
 				};
 			};
 			class missionScriptModule
 			{
+				value = "";
 				files[] = 
-				{
-					"ZenTemplate/scripts/common",
-					"ZenTemplate/scripts/5_mission"
+				{ 
+					"ZenTemplate/Scripts/5_Mission",
+					"ZenTemplate/Scripts/Common"
 				};
 			};
 		};
 	};
 };
+
 
 class CfgVehicles
 {
